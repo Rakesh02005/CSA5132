@@ -1,0 +1,18 @@
+#include<stdio.h>
+#include<string.h>
+
+int main(){
+ char p[50],c[50]; int k[50],i;
+ printf("Text: "); scanf("%s",p);
+ printf("Key nums: ");
+ for(i=0;i<strlen(p);i++) scanf("%d",&k[i]);
+ for(i=0;p[i];i++) c[i]=((p[i]-65+k[i])%26)+65;
+ c[i]=0;
+ printf("Cipher: %s",c);
+}
+
+
+output:
+Text: SEND
+Key nums: 3 1 4 2
+Cipher: VFOF
